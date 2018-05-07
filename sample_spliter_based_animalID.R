@@ -1,4 +1,7 @@
 ##sample spliter
+## This is a protocol code to automately complete the ten-fold cross-validation based on Animal ID. 
+## The test data should not contain the sample which comes from the same animal in the training data. 
+## Author list: Boyang Zhang (zhang.7077@osu.edu), Yu, Zhongtang, Moraes, Luis
 lb= 19
 ub= 23
 n=219

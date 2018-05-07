@@ -1,3 +1,4 @@
+## For plot normality and trends in EDA
 library(rcompanion)
 library(MASS)
 
@@ -335,7 +336,7 @@ ggplot(final_data,aes(x= A.P.ratio,
   labs(color='Ruminococcaceae')+
   geom_point()+
   
-  facet_grid(.~final_data$ï..ANIMID)
+  facet_grid(.~final_data$Ã¯..ANIMID)
 
 length(final_data$SampleID)
 ## sO LARGE GRAPH, need smaller size
@@ -349,11 +350,11 @@ final_data_small <- final_data[c(1:5),]
                     xlab("A.P ratio")+
                     labs(color='Ruminococcaceae')+
                     geom_point()+
-                    facet_grid(.~final_data_small$ï..ANIMID)
+                    facet_grid(.~final_data_small$Ã¯..ANIMID)
 total_3 <- c()
 n = 0 
 for (i in 1:118) {
-  find_total <- which(final_data_not_0.5$ï..ANIMID == i )
+  find_total <- which(final_data_not_0.5$Ã¯..ANIMID == i )
   total <- length(find_total)
   if (total > 2 ) {
     n = n + 1
@@ -365,18 +366,18 @@ for (i in 1:118) {
 }
 ## over 3 samples merage them
 
-list_3 <- c(which(final_data_not_0.5$ï..ANIMID == 41 ),
-            which(final_data_not_0.5$ï..ANIMID == 87 ),
-            which(final_data_not_0.5$ï..ANIMID == 105 ),
-            which(final_data_not_0.5$ï..ANIMID == 1 ),
-            which(final_data_not_0.5$ï..ANIMID == 43 ),
-            which(final_data_not_0.5$ï..ANIMID == 51 ),
-            which(final_data_not_0.5$ï..ANIMID == 54 ),
-            which(final_data_not_0.5$ï..ANIMID == 55 ),
-            which(final_data_not_0.5$ï..ANIMID == 77 ),
-            which(final_data_not_0.5$ï..ANIMID == 79 ),
-            which(final_data_not_0.5$ï..ANIMID == 87 ),
-            which(final_data_not_0.5$ï..ANIMID == 113 ))
+list_3 <- c(which(final_data_not_0.5$Ã¯..ANIMID == 41 ),
+            which(final_data_not_0.5$Ã¯..ANIMID == 87 ),
+            which(final_data_not_0.5$Ã¯..ANIMID == 105 ),
+            which(final_data_not_0.5$Ã¯..ANIMID == 1 ),
+            which(final_data_not_0.5$Ã¯..ANIMID == 43 ),
+            which(final_data_not_0.5$Ã¯..ANIMID == 51 ),
+            which(final_data_not_0.5$Ã¯..ANIMID == 54 ),
+            which(final_data_not_0.5$Ã¯..ANIMID == 55 ),
+            which(final_data_not_0.5$Ã¯..ANIMID == 77 ),
+            which(final_data_not_0.5$Ã¯..ANIMID == 79 ),
+            which(final_data_not_0.5$Ã¯..ANIMID == 87 ),
+            which(final_data_not_0.5$Ã¯..ANIMID == 113 ))
 
 
 
@@ -388,14 +389,14 @@ ggplot(final_data_animal_difference,aes(x= A.P.ratio,
   xlab("A.P ratio")+
   labs(color='Ruminococcaceae')+
   geom_point()+
-  facet_grid(.~final_data_animal_difference$ï..ANIMID)
+  facet_grid(.~final_data_animal_difference$Ã¯..ANIMID)
 
 ## still large but try to seperate it to 4 graphs 
 
 par(mfrow=c(2,2))
-list_1 <- c(which(final_data_not_0.5$ï..ANIMID == 41 ),
-            which(final_data_not_0.5$ï..ANIMID == 87 ),
-            which(final_data_not_0.5$ï..ANIMID == 105 ))
+list_1 <- c(which(final_data_not_0.5$Ã¯..ANIMID == 41 ),
+            which(final_data_not_0.5$Ã¯..ANIMID == 87 ),
+            which(final_data_not_0.5$Ã¯..ANIMID == 105 ))
 final_data_animal_difference_1 <- final_data_not_0.5[list_1,]
 plot_1 <- ggplot(final_data_animal_difference_1,aes(x= A.P.ratio,
                                         y = CH4..g.kg.DMI., 
@@ -404,12 +405,12 @@ plot_1 <- ggplot(final_data_animal_difference_1,aes(x= A.P.ratio,
   xlab("A.P ratio")+
   labs(color='Ruminococcaceae')+
   geom_point()+
-  facet_grid(.~final_data_animal_difference_1$ï..ANIMID)
+  facet_grid(.~final_data_animal_difference_1$Ã¯..ANIMID)
 
 
-list_2 <- c(which(final_data_not_0.5$ï..ANIMID == 1 ),
-            which(final_data_not_0.5$ï..ANIMID == 43 ),
-            which(final_data_not_0.5$ï..ANIMID == 51 ))
+list_2 <- c(which(final_data_not_0.5$Ã¯..ANIMID == 1 ),
+            which(final_data_not_0.5$Ã¯..ANIMID == 43 ),
+            which(final_data_not_0.5$Ã¯..ANIMID == 51 ))
 final_data_animal_difference_2 <- final_data_not_0.5[list_2,]
 plot_2 <- ggplot(final_data_animal_difference_2,aes(x= A.P.ratio,
                                           y = CH4..g.kg.DMI., 
@@ -418,11 +419,11 @@ plot_2 <- ggplot(final_data_animal_difference_2,aes(x= A.P.ratio,
   xlab("A.P ratio")+
   labs(color='Ruminococcaceae')+
   geom_point()+
-  facet_grid(.~final_data_animal_difference_2$ï..ANIMID)
+  facet_grid(.~final_data_animal_difference_2$Ã¯..ANIMID)
 
-list_3 <- c(which(final_data_not_0.5$ï..ANIMID == 54 ),
-            which(final_data_not_0.5$ï..ANIMID == 55 ),
-            which(final_data_not_0.5$ï..ANIMID == 77 ))
+list_3 <- c(which(final_data_not_0.5$Ã¯..ANIMID == 54 ),
+            which(final_data_not_0.5$Ã¯..ANIMID == 55 ),
+            which(final_data_not_0.5$Ã¯..ANIMID == 77 ))
 final_data_animal_difference_3 <- final_data_not_0.5[list_3,]
 plot_3 <- ggplot(final_data_animal_difference_3,aes(x= A.P.ratio,
                                                     y = CH4..g.kg.DMI., 
@@ -431,11 +432,11 @@ plot_3 <- ggplot(final_data_animal_difference_3,aes(x= A.P.ratio,
   xlab("A.P ratio")+
   labs(color='Ruminococcaceae')+
   geom_point()+
-  facet_grid(.~final_data_animal_difference_3$ï..ANIMID)
+  facet_grid(.~final_data_animal_difference_3$Ã¯..ANIMID)
 
-list_4 <- c(which(final_data_not_0.5$ï..ANIMID == 79 ),
-            which(final_data_not_0.5$ï..ANIMID == 87 ),
-            which(final_data_not_0.5$ï..ANIMID == 113 ))
+list_4 <- c(which(final_data_not_0.5$Ã¯..ANIMID == 79 ),
+            which(final_data_not_0.5$Ã¯..ANIMID == 87 ),
+            which(final_data_not_0.5$Ã¯..ANIMID == 113 ))
 final_data_animal_difference_4 <- final_data_not_0.5[list_4,]
 plot_4 <- ggplot(final_data_animal_difference_4,aes(x= A.P.ratio,
                                                     y = CH4..g.kg.DMI., 
@@ -444,7 +445,7 @@ plot_4 <- ggplot(final_data_animal_difference_4,aes(x= A.P.ratio,
   xlab("A.P ratio")+
   labs(color='Ruminococcaceae')+
   geom_point()+
-  facet_grid(.~final_data_animal_difference_4$ï..ANIMID)
+  facet_grid(.~final_data_animal_difference_4$Ã¯..ANIMID)
 require(gridExtra)
 grid.arrange(plot_1, plot_2, plot_3, plot_4, ncol=2)
 
@@ -463,7 +464,7 @@ plot <- ggplot(final_data_animal_difference,aes(x= A.P.ratio,
   xlab("A.P ratio")+
   labs(color='Ruminococcaceae')+
   geom_point()+
-  facet_wrap(~ final_data_animal_difference$ï..ANIMID, ncol=4)
+  facet_wrap(~ final_data_animal_difference$Ã¯..ANIMID, ncol=4)
 
 plot
 

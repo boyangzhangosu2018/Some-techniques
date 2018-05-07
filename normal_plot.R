@@ -1,4 +1,5 @@
 ## For plot normality and trends in EDA
+## Author list: Boyang Zhang (zhang.7077@osu.edu), Yu, Zhongtang, Moraes, Luis
 library(rcompanion)
 library(MASS)
 

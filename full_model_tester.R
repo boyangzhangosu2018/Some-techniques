@@ -1,3 +1,7 @@
+## This is a protocol code to automately complete full-model selection with 4 variables in the list.
+## Please notice this function contain lmer function (linear mixed model)
+## Author list: Boyang Zhang (zhang.7077@osu.edu), Yu, Zhongtang, Moraes, Luis
+
 library(lme4)
 library(MASS)
 library(nlme)
